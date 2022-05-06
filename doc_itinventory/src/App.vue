@@ -11,10 +11,39 @@ import HelloWorld from '@/components/HelloWorld.vue'
         <button id="DjangoNav" class="dropbtn"  @click="toggleDropDownDjango()">Django</button>
         <div id="myDropdown" class="dropdown-content" :class="{show:isDjango  }">
           <router-link to="/django_setup">Setup</router-link> 
-          <div class="dropdown">
+          <router-link to="/django_syntax">Django & <br>
+             Python syntax</router-link> 
+
+        <div class="dropdown">
           <button id="DjangoContent" class="dropbtn1" style=" ; " @click="toggleDropDownDjangoContent()">Code Content</button>
-           <div id="myDropdown" class="dropdown-content1" :class="{show:isConDjango  }">
-           <router-link to="/django_content">Content</router-link> 
+            <div id="myDropdown" class="dropdown-content1" :class="{show:isConDjango  }">
+              <router-link to="/django_content">Introduction</router-link>
+          <div class="dropdown">
+            <button id="DjangoContent" class="dropbtn2" style=" ; " @click="toggleDropDownMainContent()">Main.py</button>
+            <div id="myDropdown" class="dropdown-content2" :class="{show:isConMainPY  }">
+                <router-link to="/login_content">Login </router-link> 
+                <router-link to="/django_content">Logout</router-link> 
+                <router-link to="/django_content">Homepage</router-link> 
+                <router-link to="/django_content">Computer  <br> Page</router-link> 
+                <router-link to="/django_content">Laptop Page</router-link> 
+                <router-link to="/django_content">Network <br> Hardware <br> Page</router-link> 
+                <router-link to="/django_content">User Page</router-link> 
+                <router-link to="/django_content">Loan Page</router-link> 
+                <router-link to="/django_content">IP Page</router-link> 
+                <router-link to="/django_content">Software  <br> page</router-link> 
+                <router-link to="/django_content">History log</router-link> 
+                <router-link to="/django_content">QR PC</router-link> 
+                <router-link to="/django_content">QR Laptop</router-link> 
+                <router-link to="/django_content">Upload qr  <br> image for PC</router-link> 
+                <router-link to="/django_content">Upload qr  <br> image for  <br>Laptop</router-link> 
+                <router-link to="/django_content">Download file</router-link> 
+                <router-link to="/django_content">Create PDF</router-link> 
+                <router-link to="/django_content">Mass upload <br> page</router-link> 
+    
+
+            </div>
+
+          </div> 
            </div>
 
           </div>
@@ -40,7 +69,7 @@ body {
 }
 .sidenav {
   height: 100%;
-  width: 160px;
+  width: 170px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -107,8 +136,8 @@ body {
 .dropbtn1 {
   background:#eca146 ;
   color: rgb(255, 255, 255);
-  padding: 6px 8px 6px 16px;
-  font-size: 22px;
+  padding: 6px 35px 6px 16px;
+  font-size: 20px;
   border: none;
   cursor: pointer;
    display: block;
@@ -128,6 +157,29 @@ body {
   z-index: 1;
 }
 
+.dropbtn2 {
+  background:#8bd122 ;
+  color: rgb(255, 255, 255);
+  padding: 6px 90px  6px 16px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+   display: block;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn2:hover, .dropbtn2:focus {
+  background-color: #9da4a9;
+   min-width: 170px;
+}
+.dropdown-content2 {
+  display: none;
+  position: relative;
+  background-color: #aae650;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 /* Links inside the dropdown */
 .dropdown-content a {
   color: rgb(255, 255, 255);
@@ -161,6 +213,9 @@ body {
   max-height: 300px;
 
 }
+.info {
+  color: rgb(203, 112, 112);
+}
 </style>
 <script>
 export default {
@@ -168,6 +223,8 @@ export default {
   return {
     isDjango: false,
     isConDjango : false,
+    isConMainPY : false,
+
     IsFront: false,
     IsHost: false,
     IsDocument: false
@@ -181,6 +238,10 @@ methods :
   },
   toggleDropDownDjangoContent(){
     this.isConDjango = !this.isConDjango
+  }
+  ,
+  toggleDropDownMainContent(){
+    this.isConMainPY = !this.isConMainPY
   }
 }
 }
