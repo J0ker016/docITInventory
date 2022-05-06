@@ -134,7 +134,7 @@
             
     </div>
     <br>
-    <p>its will run the a development server for development purpose</p>
+   
     
  </main>
 </template>

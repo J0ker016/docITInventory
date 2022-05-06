@@ -22,9 +22,9 @@ import HelloWorld from '@/components/HelloWorld.vue'
             <button id="DjangoContent" class="dropbtn2" style=" ; " @click="toggleDropDownMainContent()">Main.py</button>
             <div id="myDropdown" class="dropdown-content2" :class="{show:isConMainPY  }">
                 <router-link to="/login_content">Login </router-link> 
-                <router-link to="/django_content">Logout</router-link> 
-                <router-link to="/django_content">Homepage</router-link> 
-                <router-link to="/django_content">Computer  <br> Page</router-link> 
+                <router-link to="/logout_content">Logout</router-link> 
+                <router-link to="/homepage_content">Homepage</router-link> 
+                <router-link to="/Computer_Page">Computer  <br> Page</router-link> 
                 <router-link to="/django_content">Laptop Page</router-link> 
                 <router-link to="/django_content">Network <br> Hardware <br> Page</router-link> 
                 <router-link to="/django_content">User Page</router-link> 
@@ -215,6 +215,24 @@ body {
 }
 .info {
   color: rgb(203, 112, 112);
+}
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 5px;
+  border-radius: 15px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #057260;
+	border: 2px solid #555555;
 }
 </style>
 <script>

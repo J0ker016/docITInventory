@@ -36,19 +36,27 @@
     </div>
    <br>
    <h3 class="title">Explanation :</h3>
-   <img src="assets\img\login\test.jpg" alt="fdf">
+   <img class="imgFlowchart" alt="image" src="@/assets/images/login/login flowchart.svg">
+   <br>
+   <br>
+   <p>The login function will receive a post request from login form. Then its store the data into local variable and use the  builtin function authenticate().
+       The function will compare the sended data with the user data store in user table. If the credential data sended exits in the database, the function will
+        proceed login into the system and create 3 session key that is name, role and styledivstaff. After its done create the session key its will go to urls path of dashboard.
+
+   </p>
    <br>
    <p></p>
     <br>
  </main>
 </template>
 <script>
+// import image from "./assets/images/test.jpg"
     export default {
-         data() {
-  return {
-   
-  }
-}
+//          data() {
+//   return {
+//      images : image
+//   }
+// }
     }
 </script>
 <style  scoped>
@@ -56,6 +64,15 @@
     max-height: 290px;
     scroll-behavior: smooth;
     overflow-y: scroll;
+
+}
+.imgFlowchart {
+    max-width: 600px;
+    max-height: 800px;
+    margin-left: 350px;
+;
+    left: 0;
+
 
 }
 </style>
